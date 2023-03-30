@@ -13,8 +13,16 @@ With this tool, the communication is:
 Browser -stdio-> bitw-bio-handler
 
 ## Installation & Setup
-
+After cloning the go repo, run
 # TODO: Automatic setup
+Run
+```bash
+go mod download
+go build .
+go run . install
+```
+And follow the steps printed in the console.
+Afterwards, just enable your biometrics unlock in the browser extension, and you're good to go.
 
 ### Manual setup
 (Sorry, this manual setup is a bit involved atm)
