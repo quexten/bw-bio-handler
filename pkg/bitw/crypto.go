@@ -48,6 +48,8 @@ type secretCache struct {
 	_clientId     []byte
 	_clientSecret []byte
 
+	masterKey []byte
+
 	// TODO: store these more securely
 	key    []byte
 	macKey []byte
@@ -146,6 +148,8 @@ func (c *secretCache) initKeys() error {
 	if err != nil {
 		return err
 	}
+
+	c.masterKey = masterKey
 
 	// This bit of code can help create a random key and encrypt it with a
 	// given email/password. Useful for creating test data for TestCipherString.

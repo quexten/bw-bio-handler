@@ -13,11 +13,13 @@ With this tool, the communication is:
 Browser -stdio-> bitw-bio-handler
 
 ## Installation & Setup
-After cloning the go repo, run
+After cloning the repository to $GOPATH/src/github.com/quexten/bw-bio-handler, run:
+```bash
 # TODO: Automatic setup
 Run
 ```bash
 go mod download
+go mod tidy
 go build .
 go run . install
 ```

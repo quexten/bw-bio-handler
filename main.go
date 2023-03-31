@@ -104,6 +104,7 @@ func install() {
 	store.SetSecret(userID, encKey)
 
 	fmt.Println("Done!")
+	fmt.Println("You can now activate the biometrics support in your browser. Enjoy!")
 }
 
 func detectAndInstallBrowsers(startPath string) error {

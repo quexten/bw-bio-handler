@@ -37,7 +37,7 @@ func DoLogin(email string, password string, urlApi string, urlIdentity string) e
 
 func GetEncKeyB64() string {
 	// encode base64
-	return base64.StdEncoding.EncodeToString(secrets.key)
+	return base64.StdEncoding.EncodeToString(secrets.masterKey)
 }
 
 func GetUserID() string {

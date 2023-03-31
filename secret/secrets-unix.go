@@ -33,7 +33,7 @@ type SecretServiceSecretStore struct {
 }
 
 func (s *SecretServiceSecretStore) GetSecret(key string) (string, error) {
-	item, _ := s.service.SearchCollection(colletion, map[string]string{"userId": key})
+	item, _ := s.service.SearchCollection(colletion, map[string]string{"account": key})
 	if len(item) > 0 {
 		secret, err := s.service.GetSecret(item[0], *s.session)
 		if err != nil {
@@ -49,15 +49,15 @@ func (s *SecretServiceSecretStore) SetSecret(userId string, key string) error {
 	if err != nil {
 		return err
 	}
-	_, err = s.service.CreateItem(colletion, secretservice.NewSecretProperties(service, map[string]string{"userId": userId}), secret, secretservice.ReplaceBehaviorReplace)
+	_, err = s.service.CreateItem(colletion, secretservice.NewSecretProperties(service, map[string]string{"account": userId}), secret, secretservice.ReplaceBehaviorReplace)
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
-func (s *SecretServiceSecretStore) DeleteSecret(key string) error {
-	items, err := s.service.SearchCollection(colletion, map[string]string{"userId": key})
+func (s *SecretServiceSecretStore) DeleteSecret(userId string) error {
+	items, err := s.service.SearchCollection(colletion, map[string]string{"account": userId})
 	if err != nil {
 		return err
 	}
