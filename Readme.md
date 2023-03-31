@@ -14,7 +14,7 @@ Browser -stdio-> bitw-bio-handler
 
 ## Installation & Setup
 After cloning the repository to $GOPATH/src/github.com/quexten/bw-bio-handler, run:
-# Automatic setup
+### Automatic setup
 Run
 ```bash
 go mod download
