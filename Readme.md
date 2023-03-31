@@ -14,8 +14,7 @@ Browser -stdio-> bitw-bio-handler
 
 ## Installation & Setup
 After cloning the repository to $GOPATH/src/github.com/quexten/bw-bio-handler, run:
-```bash
-# TODO: Automatic setup
+# Automatic setup
 Run
 ```bash
 go mod download
@@ -57,7 +56,17 @@ secret-tool store --label "com.quexten.bitwarden-biometrics-handler-<userid>" --
 and enter the encryption key when asked for the Password.
 
 Finally, we need to set up the browser manifest, and point it to this tool.
-TODO
+Copy the manifest for your browser from ./manifests to the correct location:
+- Firefox: ~/.mozilla/native-messaging-hosts/
+- Chrome: ~/.config/google-chrome/NativeMessagingHosts/
+- (for other browsers check your browser's documentation)
+
+Then, edit the manifest, and change the path to the location of the compiled binary, f.e:
+```
+"path": "/home/user/go/src/github.com/quexten/bw-bio-handler/bw-bio-handler"
+```
+
+Finally, enable biometrics unlock in the browser extension, and you're good to go.
 
 ## Security & Architecture
 
