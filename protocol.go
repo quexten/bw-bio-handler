@@ -116,6 +116,7 @@ func handlePayloadMessage(msg PayloadMessage, appID string) {
 			if err != nil {
 				logging.Panicf(err.Error())
 			}
+			logging.Debugf("Payload: %s", payloadStr)
 
 			encStr := encryptStringSymmetric(transportKey, payloadStr)
 			send(SendMessage{

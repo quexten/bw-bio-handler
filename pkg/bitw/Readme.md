@@ -1,0 +1,1 @@
+This is a modified package of https://github.com/mvdan/bitw . 

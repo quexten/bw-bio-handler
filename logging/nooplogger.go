@@ -1,6 +1,6 @@
-//go:build debug
+//go:build !logging
 
-package p
+package logging
 
 func Debugf(format string, args ...interface{}) {
 }
