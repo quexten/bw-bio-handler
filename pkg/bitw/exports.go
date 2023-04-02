@@ -6,9 +6,15 @@ package bitw
 import (
 	"context"
 	"encoding/base64"
+
+	"github.com/google/uuid"
 )
 
 func DoLogin(email string, password string, urlApi string, urlIdentity string) error {
+	if globalData.DeviceID == "" {
+		globalData.DeviceID = uuid.New().String()
+	}
+
 	secrets._password = []byte(password)
 	secrets._configEmail = email
 	apiURL = urlApi
