@@ -40,7 +40,7 @@ go test ./biometrics/
 
 Next obtain your encryption key. To do this, go to your logged in web vault, and paste:
 ```js
-console.log((await this.bitwardenContainerService.cryptoService.getEncKey()).encKeyB64)
+console.log((await this.bitwardenContainerService.cryptoService.getKey()).encKeyB64)
 ```
 into your browser console. This is your vault's encryption key, do not write it down anywhere, and do not save it in unencrypted form.
 
@@ -51,7 +51,7 @@ console.log(await this.bitwardenContainerService.cryptoService.stateService.getA
 
 Next, run the following in your system's terminal (not the browser), replacing the <userid> with the user id you got in the previous step.
 ```
-secret-tool store --label "com.quexten.bitwarden-biometrics-handler-<userid>" account <userid>
+secret-tool store --label "com.quexten.bitwarden-biometrics-handler" account <userid>
 ```
 and enter the encryption key when asked for the Password.
 
