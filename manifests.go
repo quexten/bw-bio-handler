@@ -16,8 +16,8 @@ const templateChrome = `{
 	"path": "PATH",
 	"type": "stdio",
 	"allowed_origins": [
-		"chrome-extension://nngceckbapebfimnlniiiahkandclblb/",
-		"chrome-extension://jbkfoedolllekgbhcbcoahefnbanhhlh/",
-		"chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/",
+	  "chrome-extension://nngceckbapebfimnlniiiahkandclblb/",
+	  "chrome-extension://jbkfoedolllekgbhcbcoahefnbanhhlh/",
+	  "chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/"
 	]
-}`
+  }`
