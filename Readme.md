@@ -12,6 +12,11 @@ Browser -stdio-> IPC Proxy -> Bitwarden Desktop Application
 With this tool, the communication is:
 Browser -stdio-> bitw-bio-handler
 
+## Requirements
+As of now, only Linux based systems are tested to work.
+You need to at least have a working, unlocked keyring (such as gnome-keyring) that supports the DBus Secret Service API (this is installed by default on most distributions).
+Any chromium or firefox based browser should work, as long as they are *not* installed as a Snap or Flatpak. Snap / Flatpaks currently prevent the inter-process communication required for the extension to communicate with this tool (or the official Bitwarden desktop client). This will be fixed in the future by the Web Extensions xdg portal. Finally, this tool only prompts system authentication (password) via polkit. If you want biometrics unlock to work, you need to configure biometrics to work with polkit for your distribution.
+
 ## Installation & Setup
 After cloning the repository to $GOPATH/src/github.com/quexten/bw-bio-handler, run:
 ### Automatic setup
