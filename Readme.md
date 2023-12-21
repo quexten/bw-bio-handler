@@ -1,5 +1,8 @@
 ## bw-bio-handler
 
+# Consider Goldwarden Instead, it achieves the same goal, but has other features and is actively maintained:
+https://github.com/quexten/goldwarden
+
 ### Disclaimer: This is not an official bitwarden project. Please do not direct any issues related to biometrics unlock while using this tool to the Bitwarden team. Instead create a GitHub issue on this repo.
 
 This tool is a simple implementation of the bitwarden browser IPC protocol. It only implements the subset of commands necessary to make biometrics unlock work. This replaces the need for the desktop application and ipc proxy running in the background, and enables support on unix systems (which is currently not merged in the official bitwarden desktop application). On my system this uses about 4MB of memory, compared to the official desktop application + proxy which uses about 300-400MB.
